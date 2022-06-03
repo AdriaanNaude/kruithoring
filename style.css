@@ -2,6 +2,7 @@
     --primary-color: #F3EEEE;
     --secondery-color: #000000;
     --thirsery-color: #0A7EFE;
+    --hover-color: #06D7F9;
 }
 html{
     border: 5px solid var(--secondery-color);
@@ -16,20 +17,35 @@ body {
     display: flex;
     align-items: center;
 }
+h1{
+    margin: 5px;
+}
 .inligting{
     padding: 5px;
-    margin: 5px;
+    margin: 3px;
     width: 10px;
-    border: 1px solid var(--thirsery-color);
+    border: 1px solid var(--secondery-color);
     border-radius: 30px;
     text-align: center;
-    color: var(--thirsery-color);
+    color: var(--secondery-color);
+    cursor: pointer;
+}
+.inligting:hover{
+    background-color: var(--hover-color);
+    border: 2px solid var(--secondery-color);
+    color: var(--secondery-color);
 }
 .kleur{
     padding: 5px;
-    margin: 5px;
+    margin: 3px;
     border: 1px solid var(--secondery-color);
     border-radius: 20px;
+    cursor: pointer;
+}
+.kleur:hover{
+    background-color: var(--hover-color);
+    border: 2px solid var(--secondery-color);
+    color: var(--secondery-color);
 }
 
 .content{

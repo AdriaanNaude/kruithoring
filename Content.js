@@ -15,6 +15,7 @@ window.onload = () => {
             let incryptOutput = "";
         
             //todo sit uppercase loop end randomizer in
+           // key = key.splice(.toUpperCase()); 
 
             //push word into array
             for(let x of key){arr.push(x);}
@@ -22,19 +23,23 @@ window.onload = () => {
             //array and symbol arry length
             let l = arr.length;
             let sl = simbool.length -1;
-        
+
             //random number
             let randNum = Math.ceil(Math.random()*l);
             let randSim = Math.ceil(Math.random()*sl);
-            let randNumber = Math.ceil(Math.random()*9);
+            let randNumber = Math.ceil(Math.random()*9);   // random nommer 1 tot 9
+            let randNumber2 = Math.ceil(Math.random()*5); // random nommer 1 tot 5
         
             //symbol and number value
             let randSimChois = simbool[randSim];
             let randNumChois = randNumber;
+            let randNumChois2 = randNumber2;
+
         
             //adding symbol - and number value to arry
-            arr.splice(randNum, 0, randSimChois);
-            arr.splice(randNum, 0, randNumChois);
+            arr.splice(randNum, 0, randNumChois2);   // random nommer
+            arr.splice(randNum, 0, randSimChois);   // random simbool
+            arr.splice(randNum, 0, randNumChois);  // random nommer
         
             //loop through arry to build password
             for(let y of arr){incryptOutput += y;}
