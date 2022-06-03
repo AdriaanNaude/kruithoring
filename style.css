@@ -1,7 +1,7 @@
-/* todo  orienteer voorskou reg*/
 :root{
     --primary-color: #F3EEEE;
     --secondery-color: #000000;
+    --thirsery-color: #0A7EFE;
 }
 html{
     border: 5px solid var(--secondery-color);
@@ -10,7 +10,6 @@ body {
     padding: 10px;
     width: 300px;
     background-color: var(--primary-color);
-    
 }
 
 .kop{
@@ -20,14 +19,17 @@ body {
 .inligting{
     padding: 5px;
     margin: 5px;
-    border: 1px solid var(--secondery-color);
-    border-radius: 6px;
+    width: 10px;
+    border: 1px solid var(--thirsery-color);
+    border-radius: 30px;
+    text-align: center;
+    color: var(--thirsery-color);
 }
 .kleur{
     padding: 5px;
     margin: 5px;
     border: 1px solid var(--secondery-color);
-    border-radius: 6px;
+    border-radius: 20px;
 }
 
 .content{
@@ -70,12 +72,11 @@ body {
 }
 
 .kopie{
-   margin: 5px;
-   padding: 3px;
-   
-   cursor: pointer;
-   border-radius: 5px;
-   border: 2px solid var(--secondery-color);
+    margin: 5px;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid var(--secondery-color);
 }
 #btn{
    margin: 5px;
@@ -83,7 +84,6 @@ body {
    border-radius: 5px;
    border: 2px solid var(--secondery-color);
 }
-
 .foet{
     display: flex;
     justify-content: center;
