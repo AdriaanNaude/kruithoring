@@ -58,16 +58,17 @@ window.onload = () => {
 
         var password = new Crypt(userInput.value);
 
-        setTimeout( () => {termout.innerText = "==> []" }, 1000);                //0
-        setTimeout( () => {termout.innerText = "==> [#]" }, 2000);              //1
-        setTimeout( () => {termout.innerText = "==> [###]" }, 3000);           //2
-        setTimeout( () => {termout.innerText = "==> [######]" }, 4000);       //3
-        setTimeout( () => {termout.innerText = "==> [#########]" }, 5000);   //4
-        setTimeout( () => {termout.innerText = "==> [##########]" }, 6000); //5
+        setTimeout( () => {termout.innerText = "==> []"}, 1000);                //0
+        setTimeout( () => {termout.innerText = "==> [#]"}, 2000);              //1
+        setTimeout( () => {termout.innerText = "==> [###]"}, 3000);           //2
+        setTimeout( () => {termout.innerText = "==> [######]"}, 4000);       //3
+        setTimeout( () => {termout.innerText = "==> [#########]"}, 5000);   //4
+        setTimeout( () => {termout.innerText = "==> [##########]"}, 6000); //5
+        setTimeout( () => {termout.innerText = "==> [##########]"}, 7000)
         setTimeout( () => {
             termout.innerText = "==> [##########] \n :: Klaar";
             password.incrypt();
-        }, 7000);
+        }, 8000);
     
      });
 
