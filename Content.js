@@ -64,11 +64,10 @@ window.onload = () => {
         setTimeout( () => {termout.innerText = "==> [######]"}, 4000);       //3
         setTimeout( () => {termout.innerText = "==> [#########]"}, 5000);   //4
         setTimeout( () => {termout.innerText = "==> [##########]"}, 6000); //5
-        setTimeout( () => {termout.innerText = "==> [##########]"}, 7000)
         setTimeout( () => {
             termout.innerText = "==> [##########] \n :: Klaar";
             password.incrypt();
-        }, 8000);
+        }, 7000);
     
      });
 
