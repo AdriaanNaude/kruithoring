@@ -51,11 +51,18 @@ h1{
 .content{
     padding: 5px;
 }
-.block1, .block2, .block3{
+.block1, .termBlock, .block2, .block3{
     display: flex;
     align-items: center;
     padding: 10px;
     
+}
+
+.termBlock{
+    padding: 5px;
+    background-color: var(--secondery-color);
+    color: var(--primary-color);
+    width: 280px;
 }
 .block3{
     justify-content: center;
