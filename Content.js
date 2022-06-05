@@ -41,20 +41,35 @@ window.onload = () => {
             arr.splice(randNum, 0, randSimChois);   // random simbool
             arr.splice(randNum, 0, randNumChois);  // random nommer
         
+            
             //loop through arry to build password
             for(let y of arr){incryptOutput += y;}
-            
+             
             document.getElementById("output").innerText = incryptOutput; // outputfield (password)
-
+            
         }    
     }
 
-    var userInput = document.getElementById("input"); // textfield id
-    var btn = document.getElementById("btn");// submit button
-    
+    let userInput = document.getElementById("input"); // textfield id
+    let btn = document.getElementById("btn");// submit button
+    let termout = document.getElementById("term");
+
     btn.addEventListener('click', () =>{
+
         var password = new Crypt(userInput.value);
-        password.incrypt();
+
+        setTimeout( () => {termout.innerText = "==> [          ]" }, 1000); //0
+        setTimeout( () => {termout.innerText = "==> [#]" }, 2000);         //1
+        setTimeout( () => {termout.innerText = "==> [##]" }, 3000);       //2
+        setTimeout( () => {termout.innerText = "==> [###]" }, 4000);     //3
+        setTimeout( () => {termout.innerText = "==> [####]" }, 5000);   //4
+        setTimeout( () => {termout.innerText = "==> [#####]" }, 6000); //5
+        setTimeout( () => {
+            termout.innerText = "==> [######]";
+            password.incrypt();
+        }, 7000);
+    
      });
+
 
 }    
