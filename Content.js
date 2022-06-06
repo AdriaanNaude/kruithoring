@@ -51,7 +51,8 @@ window.onload = () => {
     }
 
     let userInput = document.getElementById("input"); // textfield id
-    //let btn = document.getElementById("btn");// submit button
+    let userOutput = document.getElementById("output");
+    
     let termout = document.getElementById("term"); //output van terminaal
 
     userInput.addEventListener('keypress', (event) =>{
@@ -72,6 +73,22 @@ window.onload = () => {
             }, 7000);
         }
     
-     });
+    });
+
+    
+     let clear = document.getElementById("btn");
+
+    clear.addEventListener('click', () =>{
+
+        setTimeout( () => {termout.innerText = "==> [-----]"}, 1000);
+        setTimeout( () => {termout.innerText = "==> [----------]"}, 2000);
+        setTimeout( () => {
+             userInput.value = "";
+            termout.innerText = "::skoon";
+            userOutput.innerText = "";
+        }, 3000)
+
+        
+    });
 
 }    
