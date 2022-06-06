@@ -83,9 +83,9 @@ window.onload = () => {
         setTimeout( () => {termout.innerText = "==> [-----]"}, 1000);
         setTimeout( () => {termout.innerText = "==> [----------]"}, 2000);
         setTimeout( () => {
-            termout.innerText = "::skoon";
             userInput.value = "";
             userOutput.innerText = "";
+            termout.innerText = "::skoon";
         }, 3000)
 
         
