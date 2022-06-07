@@ -116,6 +116,7 @@ window.onload = () => {
     let colorBtn = document.getElementById("kleur");
 
     colorBtn.addEventListener('click', () =>{
-        document.body.style.backgroundColor = "#F5713F";
+        document.body.style.backgroundColor = "#5E5E5E";
+        document.body.style.color = "#F3EEEE";
     });
 }    
