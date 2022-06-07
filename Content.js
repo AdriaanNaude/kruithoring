@@ -45,15 +45,18 @@ window.onload = () => {
             //loop through arry to build password
             for(let y of arr){incryptOutput += y;}
              
-            document.getElementById("output").innerText = incryptOutput; // outputfield (password)
+            //document.getElementById("output")
+            userOutput.innerText = incryptOutput; // outputfield (password)
             
         }    
     }
 
     let userInput = document.getElementById("input"); // textfield id
-    let userOutput = document.getElementById("output");
+    let userOutput = document.getElementById("output"); // output lyn
     
     let termout = document.getElementById("term"); //output van terminaal
+
+    // keyboard action (on 'Enter')
 
     userInput.addEventListener('keypress', (event) =>{
 
@@ -61,34 +64,58 @@ window.onload = () => {
 
             var password = new Crypt(userInput.value);
 
-            setTimeout( () => {termout.innerText = "==> []"}, 1000);                //0
-            setTimeout( () => {termout.innerText = "==> [#]"}, 2000);              //1
-            setTimeout( () => {termout.innerText = "==> [###]"}, 3000);           //2
-            setTimeout( () => {termout.innerText = "==> [######]"}, 4000);       //3
-            setTimeout( () => {termout.innerText = "==> [#########]"}, 5000);   //4
-            setTimeout( () => {termout.innerText = "==> [##########]"}, 6000); //5
+            setTimeout( () => {termout.innerText = "==> []"}, 200);                //0
+            setTimeout( () => {termout.innerText = "==> [#]"}, 400);              //1
+            setTimeout( () => {termout.innerText = "==> [###]"}, 600);           //2
+            setTimeout( () => {termout.innerText = "==> [######]"}, 800);       //3
+            setTimeout( () => {termout.innerText = "==> [#########]"}, 1000);   //4
+            setTimeout( () => {termout.innerText = "==> [##########]"}, 1200); //5
             setTimeout( () => {
                 termout.innerText = "==> [##########] \n :: Klaar";
                 password.incrypt();
-            }, 7000);
+            }, 1400);
         }
     
     });
 
+
+    // button press
+    let submit = document.getElementById("submitBtn");
+
+    submit.addEventListener('click', () =>{
+
+        var password = new Crypt(userInput.value);
+
+        setTimeout( () => {termout.innerText = "==> []"}, 200);                //0
+        setTimeout( () => {termout.innerText = "==> [#]"}, 400);              //1
+        setTimeout( () => {termout.innerText = "==> [###]"}, 600);           //2
+        setTimeout( () => {termout.innerText = "==> [######]"}, 800);       //3
+        setTimeout( () => {termout.innerText = "==> [#########]"}, 1000);   //4
+        setTimeout( () => {termout.innerText = "==> [##########]"}, 1200); //5
+        setTimeout( () => {
+            termout.innerText = "==> [##########] \n :: Klaar";
+            password.incrypt();
+        }, 1400);
+    });
+
     
-     let clear = document.getElementById("btn");
+    let clear = document.getElementById("clearBtn");
 
     clear.addEventListener('click', () =>{
 
-        setTimeout( () => {termout.innerText = "==> [-----]"}, 1000);
-        setTimeout( () => {termout.innerText = "==> [----------]"}, 2000);
+        setTimeout( () => {termout.innerText = "==> [-----]"}, 500);
+        setTimeout( () => {termout.innerText = "==> [----------]"}, 1000);
         setTimeout( () => {
             userInput.value = "";
             userOutput.innerText = "";
             termout.innerText = "::skoon";
-        }, 3000)
-
+        }, 1500)
         
     });
 
+    let colorBtn = document.getElementById("kleur");
+
+    colorBtn.addEventListener('click', () =>{
+        document.body.style.backgroundColor = "#F5713F";
+    });
 }    
