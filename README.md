@@ -1,2 +1,2 @@
 # kruithoring
-Simple password generator extension for browser
+Simple password generator extension for chrome browser
